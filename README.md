@@ -14,7 +14,7 @@ build:
     - ionic cordova build android
   artifacts:
     paths:
-    - platforms/android/output/*.war
+    - platforms/android/build/outputs/apk/*.apk
 ```
 ## Extra helper command
 If you want to run or build the ionic project in computer doesn't install Android Studio Android SDK and Ionic Framework and this computer installed Docker. You can use helper command  
