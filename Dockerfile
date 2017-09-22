@@ -40,10 +40,9 @@ RUN apt-get update \
     && $ANDROID_HOME/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
     && apt-get autoremove -y \
     && rm -rf /tmp/sdk-tools-linux-${ANDROID_SDK_VERSION}.zip \ 
-    && useradd -ms /bin/bash ionic
+    && mkdir /ionicapp
 
-USER ionic
-WORKDIR /home/ionic
+WORKDIR /ionicapp
 
 
 
