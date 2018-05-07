@@ -1,4 +1,4 @@
-FROM ubuntu:zesty
+FROM ubuntu:xenial
 
 LABEL MAINTAINER="Weerayut Hongsa <kusumoto.com@gmail.com>"
 
