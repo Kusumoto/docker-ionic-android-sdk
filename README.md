@@ -33,3 +33,9 @@ docker run --rm -v $(pwd):/ionicapp -p 8100:8100 kusumoto/docker-ionic-android-s
 ```
 docker run --rm -v $(pwd):/ionicapp kusumoto/docker-ionic-android-sdk ionic cordova build android
 ```
+
+## ADB Support
+You can use adb (Android device bridge) in this docker image follow this command. (Spacial thank [@aruelo](https://github.com/aruelo) for instrcution in issue [#17](https://github.com/Kusumoto/docker-ionic-android-sdk/issues/17))
+```
+docker run --privileged -v /dev/bus/usb:/dev/bus/usb -P -v $(pwd):/ionicapp kusumoto/docker-ionic-android-sdk /opt/android-sdk/platform-tools/adb devices
+```
