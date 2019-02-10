@@ -13,6 +13,7 @@ build:
   script:
     - npm install
     - mkdir www
+    - yes | /opt/android-sdk/tools/bin/sdkmanager --licenses || true
     - ionic cordova build android
   artifacts:
     paths:
