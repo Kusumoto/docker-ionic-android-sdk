@@ -27,6 +27,7 @@ RUN apt-get update \
        git \
        gradle \
        zipalign \
+       awscli \
     && curl -sL https://deb.nodesource.com/setup_${NODEJS_VERSION}.x | bash - \
     && apt-get update \
     && apt-get install -y nodejs \
