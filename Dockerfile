@@ -40,6 +40,9 @@ RUN apt-get update \
     && $ANDROID_HOME/tools/bin/sdkmanager "platform-tools" \
     && $ANDROID_HOME/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
     && apt-get autoremove -y \
+    && apt-get autoclean -y \
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/sdk-tools-linux-${ANDROID_SDK_VERSION}.zip \ 
     && mkdir /ionicapp
 
